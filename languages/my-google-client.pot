@@ -1,0 +1,77 @@
+# Copyright (C) 2021 Maarten Menten
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: My Google Client 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/my-google-client\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-06-12T19:20:02+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: my-google-client\n"
+
+#. Plugin Name of the plugin
+msgid "My Google Client"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/mmaarten/my-google-client"
+msgstr ""
+
+#. Description of the plugin
+msgid "Setup a ready to use Google API client."
+msgstr ""
+
+#. Author of the plugin
+msgid "Maarten Menten"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://profiles.wordpress.org/maartenm/"
+msgstr ""
+
+#: src/MenuPages/Base.php:22
+#: src/MenuPages/Base.php:23
+msgid "Untitled"
+msgstr ""
+
+#: src/MenuPages/OptionsPage.php:24
+#: src/MenuPages/OptionsPage.php:25
+msgid "Google Client"
+msgstr ""
+
+#: src/MenuPages/OptionsPage.php:35
+msgid "Client ID"
+msgstr ""
+
+#: src/MenuPages/OptionsPage.php:40
+msgid "Client Secret"
+msgstr ""
+
+#: src/MenuPages/OptionsPage.php:46
+msgid "Authorized redirect URI"
+msgstr ""
+
+#: src/MenuPages/OptionsPage.php:47
+msgid "Copy this URL into the \"Authorized redirect URIs\" field of your Google web application."
+msgstr ""
+
+#: src/MenuPages/OptionsPage.php:53
+msgid "Authorization"
+msgstr ""
+
+#: src/MenuPages/OptionsPage.php:75
+msgid "You need to save settings with Client ID and Client Secret before you can proceed."
+msgstr ""
+
+#: src/MenuPages/OptionsPage.php:88
+msgid "Allow plugin to use your Google account"
+msgstr ""
+
+#: src/MenuPages/OptionsPage.php:93
+msgid "Click the button above to confirm authorization."
+msgstr ""

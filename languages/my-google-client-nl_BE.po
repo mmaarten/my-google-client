@@ -1,0 +1,85 @@
+# Copyright (C) 2021 Maarten Menten
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: My Google Client 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/my-google-client\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-06-12 21:20+0200\n"
+"PO-Revision-Date: 2021-06-12 21:21+0200\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Domain: my-google-client\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl_BE\n"
+
+#. Plugin Name of the plugin
+msgid "My Google Client"
+msgstr "Mijn Google-client"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/mmaarten/my-google-client"
+msgstr "https://github.com/mmaarten/my-google-client"
+
+#. Description of the plugin
+msgid "Setup a ready to use Google API client."
+msgstr "Stel een gebruiksklare Google API-client in."
+
+#. Author of the plugin
+msgid "Maarten Menten"
+msgstr "Maarten Menten"
+
+#. Author URI of the plugin
+msgid "https://profiles.wordpress.org/maartenm/"
+msgstr "https://profiles.wordpress.org/maartenm/"
+
+#: src/MenuPages/Base.php:22 src/MenuPages/Base.php:23
+msgid "Untitled"
+msgstr "Geen titel"
+
+#: src/MenuPages/OptionsPage.php:24 src/MenuPages/OptionsPage.php:25
+msgid "Google Client"
+msgstr "Google Client"
+
+#: src/MenuPages/OptionsPage.php:35
+msgid "Client ID"
+msgstr "Client ID"
+
+#: src/MenuPages/OptionsPage.php:40
+msgid "Client Secret"
+msgstr "Client Secret"
+
+#: src/MenuPages/OptionsPage.php:46
+msgid "Authorized redirect URI"
+msgstr "Geautoriseerde omleidings-URI"
+
+#: src/MenuPages/OptionsPage.php:47
+msgid ""
+"Copy this URL into the \"Authorized redirect URIs\" field of your Google web "
+"application."
+msgstr ""
+"Kopieer deze URL naar het veld ‘Geautoriseerde omleidings-URI’s’ van uw "
+"Google-webtoepassing."
+
+#: src/MenuPages/OptionsPage.php:53
+msgid "Authorization"
+msgstr "Autorisatie"
+
+#: src/MenuPages/OptionsPage.php:75
+msgid ""
+"You need to save settings with Client ID and Client Secret before you can "
+"proceed."
+msgstr ""
+"U moet instellingen opslaan met Client ID en Client Secret voordat u verder "
+"kunt gaan."
+
+#: src/MenuPages/OptionsPage.php:88
+msgid "Allow plugin to use your Google account"
+msgstr "Toestaan dat de plug-in uw Google-account gebruikt"
+
+#: src/MenuPages/OptionsPage.php:93
+msgid "Click the button above to confirm authorization."
+msgstr "Klik op de knop hierboven om de autorisatie te bevestigen."
