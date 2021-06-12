@@ -10,8 +10,14 @@ class App
     {
         OptionsPage::getInstance()->init();
 
+        add_action('init', [__CLASS__, 'loadTextdomain']);
         add_action('admin_init', [__CLASS__, 'authenticate']);
         add_action('admin_init', [__CLASS__, 'initFields']);
+    }
+
+    public static function loadTextdomain()
+    {
+        load_plugin_textdomain('my-google-client', false, dirname(plugin_basename(MY_GOOGLE_CLIENT_PLUGIN_FILE)) . '/languages');
     }
 
     public static function initFields()
