@@ -61,7 +61,7 @@ final class OptionsPage extends Base
         printf(
             '<input type="text" id="%1$s" class="regular-text" value="%2$s" readonly>',
             esc_attr($field['id']),
-            esc_url(App::getClientRedirectURI())
+            esc_url(App::getAuthRedirectURL())
         );
     }
 
