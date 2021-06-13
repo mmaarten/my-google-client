@@ -70,15 +70,6 @@ final class OptionsPage extends Base
         $client_id     = $this->getOption('client_id');
         $client_secret = $this->getOption('client_secret');
 
-        if (! $client_id || ! $client_secret) {
-            Helpers::adminNotice(
-                __('You need to save settings with Client ID and Client Secret before you can proceed.', 'my-google-client'),
-                'error',
-                true
-            );
-            return;
-        }
-
         try {
             $client = App::getClient();
 
