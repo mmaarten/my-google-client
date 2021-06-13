@@ -52,6 +52,8 @@ class App
             $redirect_url = MY_GOOGLE_CLIENT_AUTH_REDIRECT_URL;
         }
 
+        $redirect_url = preg_replace('#^http://#', 'https://', $redirect_url);
+
         return $redirect_url;
     }
 
@@ -78,6 +80,10 @@ class App
             $code  = urldecode($_GET['code']);
 
             update_option('my_google_client_auth_code', $code);
+
+            wp_redirect(OptionsPage::getInstance()->getPageURL());
+
+            exit;
         }
     }
 
@@ -90,11 +96,18 @@ class App
     {
         $client = null;
 
+        if (! self::getOption('client_id') || ! self::getOption('client_secret')) {
+            throw new \Exception(
+                __(
+                    'You need to save settings with Client ID and Client Secret before you can proceed.',
+                    'my-google-client'
+                )
+            );
+        }
+
         try {
             $client = new \Google_Client();
             $client->setApplicationName('My Google Client');
-            // see: https://developers.google.com/identity/protocols/oauth2/scopes
-            //$client->setScopes(\Google_Service_Calendar::CALENDAR_READONLY);
             $client->setAuthConfig([
                 'client_id'     => self::getOption('client_id'),
                 'client_secret' => self::getOption('client_secret'),
@@ -105,7 +118,14 @@ class App
             $client->setState(OptionsPage::getInstance()->getPageURL());
 
             // Alter client settings
+            // Need to set required scope.
+            // see: https://developers.google.com/identity/protocols/oauth2/scopes
+            // e.g.: $client->setScopes(\Google_Service_Calendar::CALENDAR_READONLY);
             $client = apply_filters('my_google_client', $client);
+
+            if (! get_option('my_google_client_auth_code')) {
+                return $client;
+            }
 
             // Set previously authorized token, if it exists.
             if (get_option('my_google_client_access_token')) {
