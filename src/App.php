@@ -129,7 +129,7 @@ class App
 
                     // Check to see if there was an error.
                     if (array_key_exists('error', $access_token)) {
-                        throw new Exception(join(', ', $access_token));
+                        throw new \Exception(join(', ', $access_token));
                     }
                 }
 
@@ -138,7 +138,7 @@ class App
                 update_option('my_google_client_refresh_token', $client->getRefreshToken());
             }
         } catch (\Exception $e) {
-            throw new Exception($e->getMessage());
+            throw new \Exception($e->getMessage());
         }
 
         return $client;
