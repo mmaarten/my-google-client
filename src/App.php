@@ -77,8 +77,6 @@ class App
             $scope = urldecode($_GET['scope']);
             $code  = urldecode($_GET['code']);
 
-            error_log('auth code set').
-
             update_option('my_google_client_auth_code', $code);
         }
     }
@@ -116,18 +114,15 @@ class App
 
             // If there is no previous token or it's expired.
             if ($client->isAccessTokenExpired()) {
-                error_log('Token expired');
                 // Refresh the token if possible, else fetch a new one.
                 $refresh_token = $client->getRefreshToken();
                 if (! $refresh_token && get_option('my_google_client_refresh_token')) {
                     $refresh_token = get_option('my_google_client_refresh_token');
                 }
                 if ($refresh_token) {
-                    error_log('Use refresh token');
                     $access_token = $client->fetchAccessTokenWithRefreshToken($refresh_token);
                     $client->setAccessToken($access_token);
                 } else {
-                    error_log('Use auth code');
                     // Exchange authorization code for an access token.
                     $access_token = $client->fetchAccessTokenWithAuthCode(get_option('my_google_client_auth_code'));
                     $client->setAccessToken($access_token);
